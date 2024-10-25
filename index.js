@@ -5,7 +5,7 @@ const pkg = require('./package.json')
 const {
   'binary-path-env-var': BINARY_PATH_ENV_VAR,
   'executable-base-name': executableBaseName,
-} = pkg[pkg.name]
+} = pkg[pkg.name.replace('@davepagurek/', '')]
 if ('string' !== typeof BINARY_PATH_ENV_VAR) {
   throw new Error(`package.json: invalid/missing ${pkg.name}.binary-path-env-var entry`)
 }
