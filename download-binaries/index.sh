@@ -63,41 +63,41 @@ echo 'linux x64'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz' linux-x64.tar.xz
 echo '  extracting'
-xzcat linux-x64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg' '*/ffprobe'
+xzcat linux-x64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 '*/ffmpeg' '*/ffprobe'
 mv ../bin/ffmpeg ../bin/ffmpeg-linux-x64
 mv ../bin/ffprobe ../bin/ffprobe-linux-x64
-xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-x64.LICENSE
-xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-x64.README
+xzcat linux-x64.tar.xz | $tar_exec -x -O '**/GPLv3.txt' >../bin/linux-x64.LICENSE
+xzcat linux-x64.tar.xz | $tar_exec -x -O '**/readme.txt' >../bin/linux-x64.README
 
 echo 'linux ia32'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-i686-static.tar.xz' linux-ia32.tar.xz
 echo '  extracting'
-xzcat linux-ia32.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg' '*/ffprobe'
+xzcat linux-ia32.tar.xz | $tar_exec -x -C ../bin --strip-components 1 '*/ffmpeg' '*/ffprobe'
 mv ../bin/ffmpeg ../bin/ffmpeg-linux-ia32
 mv ../bin/ffprobe ../bin/ffprobe-linux-ia32
-xzcat linux-ia32.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-ia32.LICENSE
-xzcat linux-ia32.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-ia32.README
+xzcat linux-ia32.tar.xz | $tar_exec -x -O '**/GPLv3.txt' >../bin/linux-ia32.LICENSE
+xzcat linux-ia32.tar.xz | $tar_exec -x -O '**/readme.txt' >../bin/linux-ia32.README
 
 echo 'linux arm'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-armhf-static.tar.xz' linux-arm.tar.xz
 echo '  extracting'
-xzcat linux-arm.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg' '*/ffprobe'
+xzcat linux-arm.tar.xz | $tar_exec -x -C ../bin --strip-components 1 '*/ffmpeg' '*/ffprobe'
 mv ../bin/ffmpeg ../bin/ffmpeg-linux-arm
 mv ../bin/ffprobe ../bin/ffprobe-linux-arm
-xzcat linux-arm.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-arm.LICENSE
-xzcat linux-arm.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-arm.README
+xzcat linux-arm.tar.xz | $tar_exec -x -O '**/GPLv3.txt' >../bin/linux-arm.LICENSE
+xzcat linux-arm.tar.xz | $tar_exec -x -O '**/readme.txt' >../bin/linux-arm.README
 
 echo 'linux arm64'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-arm64-static.tar.xz' linux-arm64.tar.xz
 echo '  extracting'
-xzcat linux-arm64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg' '*/ffprobe'
+xzcat linux-arm64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 '*/ffmpeg' '*/ffprobe'
 mv ../bin/ffmpeg ../bin/ffmpeg-linux-arm64
 mv ../bin/ffprobe ../bin/ffprobe-linux-arm64
-xzcat linux-arm64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-arm64.LICENSE
-xzcat linux-arm64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-arm64.README
+xzcat linux-arm64.tar.xz | $tar_exec -x -O '**/GPLv3.txt' >../bin/linux-arm64.LICENSE
+xzcat linux-arm64.tar.xz | $tar_exec -x -O '**/readme.txt' >../bin/linux-arm64.README
 
 echo 'darwin x64'
 echo '  downloading from evermeet.cx'
