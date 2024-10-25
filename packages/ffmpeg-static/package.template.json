@@ -1,5 +1,5 @@
 {
-	"name": "ffmpeg-static",
+	"name": "@davepagurek/ffmpeg-static",
   "description": "ffmpeg binaries for macOS, Linux and Windows",
   "keywords": [
     "ffmpeg",
