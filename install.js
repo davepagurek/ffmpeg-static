@@ -168,7 +168,7 @@ const arch = process.env.npm_config_arch || os.arch()
 const platform = process.env.npm_config_platform || os.platform()
 const downloadsUrl = (
   process.env[BINARIES_URL_ENV_VAR] ||
-  'https://github.com/eugeneware/ffmpeg-static/releases/download'
+  'https://github.com/davepagurek/ffmpeg-static/releases/download'
 )
 const baseUrl = `${downloadsUrl}/${release}`
 const downloadUrl = `${baseUrl}/${executableBaseName}-${platform}-${arch}.gz`
