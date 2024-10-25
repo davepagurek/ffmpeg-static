@@ -13,13 +13,14 @@ const {createGunzip} = require('zlib')
 const {pipeline} = require('stream')
 const binaryPath = require('.')
 var pkg = require("./package");
+const pkgName = pkg.name.replace('@davepagurek/', '')
 const {
   'executable-base-name': executableBaseName,
   'binary-release-tag-env-var': RELEASE_ENV_VAR,
   'binaries-url-env-var': BINARIES_URL_ENV_VAR,
-} = pkg[pkg.name]
+} = pkg[pkgName]
 if ('string' !== typeof executableBaseName) {
-  throw new Error(`package.json: invalid/missing ${pkg.name}.executable-base-name entry`)
+  throw new Error(`package.json: invalid/missing ${pkgName}.executable-base-name entry`)
 }
 
 const exitOnError = (err) => {
@@ -32,7 +33,7 @@ const exitOnErrorOrWarnWith = (msg) => (err) => {
 }
 
 if (!binaryPath) {
-  exitOnError(`${pkg.name} install failed: No binary found for architecture`)
+  exitOnError(`${pkgName} install failed: No binary found for architecture`)
 }
 
 try {
@@ -77,7 +78,7 @@ strictEqual(
   'https://github-production-release-asset-2e65be.s3.amazonaws.com/29458513/26341680-4231-11ea-8e36-ae454621d74a?actor_id=0&response-content-disposition=attachment%3B%20filename%3Ddarwin-x64&response-content-type=application%2Foctet-stream'
 )
 
-const cache = new FileCache(envPaths(pkg.name).cache)
+const cache = new FileCache(envPaths(pkgName).cache)
 cache.getCacheKey = (url) => {
   return FileCache.prototype.getCacheKey(normalizeS3Url(url))
 }
@@ -162,7 +163,7 @@ function onProgress(deltaBytes, totalBytes) {
 
 const release = (
   process.env[RELEASE_ENV_VAR] ||
-  pkg[pkg.name]['binary-release-tag']
+  pkg[pkgName]['binary-release-tag']
 )
 const arch = process.env.npm_config_arch || os.arch()
 const platform = process.env.npm_config_platform || os.platform()
