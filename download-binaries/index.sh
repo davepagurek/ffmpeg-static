@@ -114,8 +114,8 @@ curl -fsSL 'https://evermeet.cx/ffmpeg/info/ffmpeg/release' | jq --tab '.' >../b
 
 echo 'darwin arm64'
 echo '  downloading from osxexperts.net'
-download 'https://www.osxexperts.net/ffmpeg6arm.zip' ffmpeg-darwin-arm64.zip
-download 'https://www.osxexperts.net/ffprobe6arm.zip' ffprobe-darwin-arm64.zip
+download 'https://www.osxexperts.net/ffmpeg7arm.zip' ffmpeg-darwin-arm64.zip
+download 'https://www.osxexperts.net/ffprobe7arm.zip' ffprobe-darwin-arm64.zip
 echo '  extracting'
 unzip -o -d ../bin -j ffmpeg-darwin-arm64.zip ffmpeg
 unzip -o -d ../bin -j ffprobe-darwin-arm64.zip ffprobe
