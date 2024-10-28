@@ -1,7 +1,7 @@
 {
 	"private": true,
   "name": "@davepagurek/ffmpeg-static",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "description": "ffmpeg & ffprobe binaries for macOS, Linux and Windows",
   "workspaces": [
   	"packages/ffmpeg-static",
